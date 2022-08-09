@@ -13,14 +13,14 @@ pipeline {
         // }
         stage("Build"){
             steps {
-                dir("Jenkin-Job/MavenHelloWorld") {
+                dir("MavenHelloWorld") {
                     sh "mvn clean install"
                 }
             }
         }
         stage("Test"){
             steps {
-                 dir("Jenkin-Job/MavenHelloWorld") {
+                 dir("MavenHelloWorld") {
                     sh "mvn test"
                 }
             }
